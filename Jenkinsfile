@@ -17,9 +17,15 @@ pipeline {
                     npm --version
                     npm install @angular/cli
                     npm ci
-                    ng build
+                    ./node_modules/.bin/ng build
                 '''
                 //The npm ci command is used to install Node.js project dependencies in a clean and reliable way. It is similar to npm install, but with a few important differences that make it particularly useful for CI (Continuous Integration) environments like Jenkins.
+            }
+        }
+
+        stage('Test'){
+            steps{
+                echo 'Test stage'
             }
         }
     }
