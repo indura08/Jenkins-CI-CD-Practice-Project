@@ -25,8 +25,17 @@ pipeline {
         }
 
         stage('Test'){
+            agent {
+                docker {
+                    image 'node:20-alpine'
+                    reuseNode true
+                }
+            }
             steps{
-                sh 'Test -f dist/jenkinsproject/browser/index.html'
+                //me shell command ekn krnne dist folder eka athule jenkinsproject folder ek athule browser folder eka athule index.html file ek thiynwad kiyla balana ek , meka boho sarala test kirimak
+                sh '''
+                        test -f dist/jenkinsproject/browser/index.html
+                    '''
             }
         }
     }
