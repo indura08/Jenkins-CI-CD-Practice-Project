@@ -35,10 +35,18 @@ pipeline {
                 //me shell command ekn krnne dist folder eka athule jenkinsproject folder ek athule browser folder eka athule index.html file ek thiynwad kiyla balana ek , meka boho sarala test kirimak
                 sh '''
                         test -f dist/jenkinsproject/browser/index.html
-                        npm test
+                        ng test
                         
                     '''
             }
+        }
+    }
+
+    //post kiynne me agents la tika run unain passe kiyna eki
+    post {
+        //methna always kiynne pipeline ek fail unath success unath mekarun wenna kiyna eki
+        always {
+            junit 'test-results/junit.xml'
         }
     }
 }
