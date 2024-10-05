@@ -30,9 +30,9 @@ pipeline {
 
         stage('Tests') {
             parallel {
-                stage('Unit tests'){
-                    agent{
-                        docker{
+                stage('Unit tests') {
+                    agent {
+                        docker {
                             image 'node-20-alpine'
                             reuseNode true
                         }
@@ -75,6 +75,8 @@ pipeline {
                     }
                 }
         }
+
+    }
 
         // stage('Test'){
         //     agent {
@@ -122,4 +124,4 @@ pipeline {
     // }
 }
 
-}
+//next day pipeline ek balala hariyt hdgnna 
