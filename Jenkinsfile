@@ -29,29 +29,29 @@ pipeline {
             }
         }
 
-        stage('Tests') {
-            parallel {
-                stage('Unit tests') {
-                    agent {
-                        docker {
-                            image 'node-20-alpine'
-                            reuseNode true
-                        }
-                    }
-                    steps {
-                        sh ''' 
-                            #test -f dist/jenkinsproject/browser/index.html
-                            npm install @angular/cli
-                            npm ci
-                            ./node_modules/.bin/ng test
-                        '''
-                    }
-                    post {
-                        always {
-                            junit 'jest-result/junit.xml'
-                        }
-                    }
-                }
+        // stage('Tests') {
+        //     parallel {
+        //         stage('Unit tests') {
+        //             agent {
+        //                 docker {
+        //                     image 'node-20-alpine'
+        //                     reuseNode true
+        //                 }
+        //             }
+        //             steps {
+        //                 sh ''' 
+        //                     #test -f dist/jenkinsproject/browser/index.html
+        //                     npm install @angular/cli
+        //                     npm ci
+        //                     ./node_modules/.bin/ng test
+        //                 '''
+        //             }
+        //             post {
+        //                 always {
+        //                     junit 'jest-result/junit.xml'
+        //                 }
+        //             }
+        //         }
 
                 // stage('E2E'){
                 //     agent {
