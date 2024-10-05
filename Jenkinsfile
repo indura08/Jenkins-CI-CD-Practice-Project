@@ -3,7 +3,7 @@ pipeline {
 
     environment{
         NETLIFY_SITE_ID = '36c19340-1392-4120-accf-6175a16ca23e'
-        NETLIFY_AUTH_TOKEN = credentials('nfp_3tRuKxjzxF15ptV2PedZiSKL9vuEzTNC83b2')     //api jenkins dashboard ekt ghilla menna me wage jenkins-token kiyla token ekk hduwa (secret text ekk), ann e jenkins wala hdapu tokens secret keys wage ewa thamimetha me credentials kiyla deenne , ehmai jenkins aduragnne credentaials
+        NETLIFY_AUTH_TOKEN = credentials('netlify-token')     //api jenkins dashboard ekt ghilla menna me wage jenkins-token kiyla token ekk hduwa (secret text ekk), ann e jenkins wala hdapu tokens secret keys wage ewa thamimetha me credentials kiyla deenne , ehmai jenkins aduragnne credentaials
     }
 
     stages {
