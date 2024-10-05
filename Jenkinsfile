@@ -110,7 +110,7 @@ pipeline {
                     node_modules/.bin/netlify --version  
                     echo "Deploying to production. Site Id : $NETLIFY_SITE_ID"
                     node_modules/.bin/netlify status
-                    node_modules/.bin/netlify deploy --dir=dist --prod
+                    node_modules/.bin/netlify deploy --dir=dist/jenkinsproject/browser --prod
                 '''
                 //awlk giyoth dist wenuwat browser denna 
                 // ng build eka paara ghnna bha mokda angular cliek globally install wela nathi hinda , enisa node_modules walt gihilla thami wenama ng build eka ganne meke aocmmand ek deela thiynwa wage 
