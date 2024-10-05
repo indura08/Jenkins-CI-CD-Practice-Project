@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment{
-        NETLIFY_SITE_ID = ''
+        NETLIFY_SITE_ID = '36c19340-1392-4120-accf-6175a16ca23e'
+        NETLIFY_AUTH_TOKEN = credential('nfp_3tRuKxjzxF15ptV2PedZiSKL9vuEzTNC83b2')     //api jenkins dashboard ekt ghilla menna me wage jenkins-token kiyla token ekk hduwa (secret text ekk), ann e jenkins wala hdapu tokens secret keys wage ewa thamimetha me credentials kiyla deenne , ehmai jenkins aduragnne credentaials
     }
 
     stages {
@@ -108,6 +109,7 @@ pipeline {
                     npm install netlify-cli   
                     node_modules/.bin/netlify --version  
                     echo "Deploying to production. Site Id : $NETLIFY_SITE_ID"
+                    node_modules/.bin/netlify status 
                 '''
                 // ng build eka paara ghnna bha mokda angular cliek globally install wela nathi hinda , enisa node_modules walt gihilla thami wenama ng build eka ganne meke aocmmand ek deela thiynwa wage 
                 //The npm ci command is used to install Node.js project dependencies in a clean and reliable way. It is similar to npm install, but with a few important differences that make it particularly useful for CI (Continuous Integration) environments like Jenkins.
