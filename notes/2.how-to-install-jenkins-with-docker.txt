@@ -1,0 +1,55 @@
+step by step:
+
+1. mulinma jenkingssambnda r  eka thibba tutorial kablpuekkege project clone krgtta 
+
+2. eta passe men ame command ek ghuwa : docker build -t my-Jenkins .
+
+3.eta passe menna  command  ghuwa : docker compose up -d
+
+4. eta passe localhost:8080 walt ynwa
+
+ethaninpasswrd enna iwwa , ocker desktop eke my-jenking kiylrun ena image eke athule hiynwa wa deck eke aye ekk thiynwa y Jenkins kiyla eke thiynwa password ka , eka copy krgena athna passwordeka thant denwa
+
+Docker is a great way to run Jenkins because it isolates Jenkins in a container. Please keep that in mind
+
+dan mage ,achine eke Jenkins install krlanha , e wenuwat krla thiynne Jenkins docker image ekk widiyta ocker mage ekk pull krgatta wage scn ekk wela thiynne 
+
+
+Q: what is the difference between installing jenkins on windows and installing jenkins with docker ? please explain in simpler terms?
+
+A:
+
+1. Installing Jenkins on Windows (Direct Installation)
+What it means: You are installing Jenkins directly on your Windows operating system.
+How it works:
+Jenkins runs like any other app on your computer.
+It gets installed on your hard drive, uses your system’s resources (memory, CPU), and stores all its data in folders on your machine (like C:/Program Files/Jenkins).
+You’ll manage Jenkins through the Windows operating system.
+
+Pros:
+Simplicity: Easy to install if you’re familiar with regular software installations.
+No Docker needed: If you're not using Docker for anything else, this can be simpler.
+
+Cons:
+Resource Usage: Jenkins runs directly on your system, using your system resources and possibly slowing down your machine.
+Messy Uninstallation: If you want to remove it, Jenkins leaves behind files and settings on your machine, which you may have to clean up manually.
+Limited Isolation: Any system issues (like misconfigured software or Windows updates) could affect Jenkins.
+
+2. Installing Jenkins with Docker (Containerized Installation)
+
+What it means: You are running Jenkins inside a Docker container, which is like a small, isolated virtual machine.
+
+How it works:
+Instead of installing Jenkins directly on Windows, you run it inside a Docker container.
+Docker creates a completely isolated environment for Jenkins that doesn’t interfere with your main system.
+Jenkins and all its configurations are neatly packaged inside the container, which makes it easy to start, stop, and remove without affecting the rest of your system.
+
+Pros:
+Isolation: Jenkins runs in a separate container, so it won’t mess with your Windows system, and your system won’t interfere with Jenkins.
+Easy Management: Starting, stopping, or even removing Jenkins is simple with Docker commands. You can easily restart Jenkins without affecting the rest of your system.
+Clean Removal: If you no longer need Jenkins, you can remove the entire container and leave no trace behind.
+Portability: You can move your Jenkins setup to another machine (as long as Docker is installed) without much hassle.
+
+Cons:
+Requires Docker: You need to understand and install Docker first, which is an additional step if you’re not familiar with it.
+More Technical: Managing containers may seem a bit more complex if you're new to Docker.

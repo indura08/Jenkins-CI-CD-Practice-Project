@@ -1,0 +1,24 @@
+step 1: Mulinnma AWS Service walin EC@ service ekn EC2 instance ekk hdgatta eke nama widiyt Jenkins Master kiyl thami dunne
+
+step 2 : EC2 instance eka hadaddi apita download krgnna enwa .pem file ekk e.pem file ek download krgttu htnain command line ek openkrgena menna me command eke ghnwa : 
+
+	" ssh -i "Jenkins(1).pem" ec2-user@54.250.52.166 "  ==> methana Jenkins(1).pem kiynne .pem file eke nama and 54.250.52.166 kiynne ec2 instamce eke public ip address eka , ewa thamn hdna ec2instance eke detail ekk hadagnna 
+
+
+step 3: uda step ekedi awa gataluwak thami api Jenkisn(1).pem file ek open krla ssh ek harah ec2 instance ekt connect wenna giyma permission awlk thiynwa kiyl pennwna , e kiynne thamnge user acount ekn arunama thawa account walt me file ek expose wenwa kiyla kiynwa , "too open" kiyl kiynwa eka hduwwe menna mehm:
+
+	1. .pem file eke proeprtiesynwa 
+	2. security tab eke advanced ynwa 
+	3. eta passe diasable inheritance denwa, eta passe enwa khmd inheritance ain krnne one kiyla eta passe denwa all inheritance kiyna ek 
+	4. eta passe Add denwa 
+	4. eta passe select a principle denwa    
+	5. select a principle ekn ena object types ekn ena list eke users withrk check krla anik wa unchekc krnwa 
+	6. eta passe e widiyat ok deela add deela permisionm mage user account ekt withrk ena widiyt hdgnnawa
+
+step 4: dan thiynne commands ghnna :
+
+	" sudo yum update -y"
+
+step % : command ==> 
+
+	" sudo dnf install java-22"

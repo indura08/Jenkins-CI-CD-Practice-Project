@@ -1,0 +1,47 @@
+meka great learning eke course eka krddi dagnna note ekaki.
+
+Dev-Ops phases
+--------------
+
+1.Continuous development 
+
+2.Continuous Testing 
+
+3.Continuous Integration
+
+4.Continuous Deployment
+
+5. Continuous Monitoring 
+
+Benefits of DevOps
+------------------
+
+1.Increased productivity
+
+2.Excellence of outcome because of DevOps
+
+3.Higher profits 
+
+
+What is Jenkins
+-----------------
+
+Jenkins is an opensource continuous integration tool written in java that allows us to automate the software development process, making sure that there is minimum involvement from us. It also integrate all the different parts of the development.
+
+Jenkins is a part of this continuous integration phase
+
+Jenkins ekedi wenne api kwruhari software developer knk software ek develop krla source code managemtn system ekkt damma (GitHub , gtilab) Jenkins ekn eka server ekkt pull krgena ehma nattnm clone krgena , api Jenkins walin liyna CI pipeline ekt adlwa test krna ewa saha build krna ewa run krla aye push krnwa thawa poddk sankeeran testing krna server ekkt ,etath passe deployment ekt ho wena kohe hari thiyla thiyna e code base ekt adla full code ekt eka integrate krnwa 
+
+Jenkins hodama ci/cd tool eka nowaunth Jenkins is the best to supportability flexibility provides for diffrenet plugins. It has the best supportability of allthe ci/cd tools 
+
+How Jenkins Pipeline work
+------------------------
+
+step 1: developer pushed code  to source code manager platform like GitHub or GitLab
+
+step 2: then Jenkins start to build the project when Jenkins detect a change happend in the code base
+
+step 3: then Jenkins will do the other parts defined in the pipeline after building executable file 
+
+step 4: then Jenkins will send the code to staging environment and then it will deployed (continuous deployment)
+
